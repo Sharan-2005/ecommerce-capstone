@@ -11,9 +11,9 @@ pipeline {
 
         stage('Run Container') {
             steps {
-                sh 'docker stop ecommerce-container || true'
-                sh 'docker rm ecommerce-container || true'
-                sh 'docker run -d --name ecommerce-container -p 3001:80 ecommerce-site'
+                sh 'docker stop ecommerce-container-jenkins || true'
+                sh 'docker rm ecommerce-container-jenkins || true'
+                sh 'docker run -d --name ecommerce-container-jenkins -p 3001:80 ecommerce-site'
             }
         }
 
